@@ -1,0 +1,50 @@
+﻿@inherits LayoutComponentBase
+<MudThemeProvider Theme="theme" />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout>
+    <MudAppBar>
+        <MudText Color="Color.Default" Class="ml-10" Typo="Typo.h5">Blogzor</MudText>
+        <MudSpacer />
+        <MudIconButton Class="mr-10" Icon="@Icons.Custom.Brands.GitHub" />
+    </MudAppBar>
+    <MudMainContent>
+        <MudContainer MaxWidth="MaxWidth.Medium">
+            @Body
+        </MudContainer>
+    </MudMainContent>
+</MudLayout>
+
+@code
+{
+    private MudTheme theme = new MudTheme()
+    {
+        Palette = new Palette()
+        {
+            Background = "#262626",
+            BackgroundGrey = "#454545",
+            Surface = "#313131",
+
+            Primary = "#519aa6",
+            PrimaryLighten = "#99f1ff",
+            PrimaryDarken = "#1c5159",
+            PrimaryContrastText = "#020202",
+
+            AppbarBackground = "#519aa6",
+            AppbarText = "#dddddd",
+
+            TableLines = "#333333",
+            TableStriped = "#292929",
+            TableHover = "#444444",
+
+            DrawerBackground = "#202020",
+            DrawerText = "#dedede",
+            DrawerIcon = "#dedede",
+
+            TextPrimary = "#dedede",
+            TextSecondary = "#cdcdcd",
+            TextDisabled = "#c0c0c0",
+        },
+    };
+}
